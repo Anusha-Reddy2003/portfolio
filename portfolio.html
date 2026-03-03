@@ -3,93 +3,111 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
+  <title>E Anusha Reddy | Portfolio</title>
   <link rel="stylesheet" href="portfolio.css">
 </head>
 <body>
-
-  <!-- Header -->
   <header>
-    <div class="header-content">
-      <div class="header-text">
-        <h2>E Anusha Reddy</h2>
-        <p>Full Stack intern</p>
-      </div>
-      <div class="header-photo">
-        <img src="" alt="Profile Photo">
-      </div>
-    </div>
+    <h1>E Anusha Reddy</h1>
+    <p>Aspiring Software Developer | AI & DS Student</p>
   </header>
 
-  <!-- Navigation -->
   <nav>
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
+    <a href="#education">Education</a>
     <a href="#projects">Projects</a>
+    <a href="#internships">Internships</a>
     <a href="#contact">Contact</a>
+    <a href="https://drive.google.com/file/d/1lxkhNkFhe9pLK9UqLdAvZvGs2YKaluoO/view?usp=drive_link" target="_blank">view my resume</a>
   </nav>
 
-  <!-- About Section -->
   <section id="about">
     <h2>About Me</h2>
-    <div class="card">
-      <p>Hello! I'm a passionate Full Stack Developer focused on building user-friendly websites. I enjoy learning new technologies and applying them to real-world projects.</p>
-    </div>
+    <p>Asipiring Java Developer with knowledge in Java, SQL, HTML, CSS, JS seeking a Developer role to apply skills and contribute to building efficient web applications in a collaborative environment.</p>
   </section>
 
-  <!-- Skills Section -->
   <section id="skills">
     <h2>Skills</h2>
-    <div class="skills-grid">
-      <div class="card">
-        <h3>Frontend</h3>
-        <ul>
-          <li>HTML, CSS, JavaScript</li>
-          <!-- <li>React.js</li> -->
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Backend</h3>
-        <ul>
-          <li>Java</li>
-          <li>Hibernate</li>
-          <li>SpringBoot</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Database & Tools</h3>
-        <ul>
-          <li>SQL</li>
-          <li>Git & GitHub</li>
-          <li>IoT Development</li>
-        </ul>
-      </div>
+    <div class="card">
+      <p><b>Programming Languages:</b>Java</p>
+      <p><b>Database:</b>MySQL</p>
+      <p><b>Web Technologies:</b> HTML, CSS,JS</p>
+      <p><b>Soft Skills:</b>Adaptability, Communication, Team Collaboration</p>
     </div>
   </section>
 
-  <!-- Projects Section -->
+  <section id="education">
+    <h2>Education</h2>
+    <div class="card">
+      <p><b>BTech in AI & DS</b> - Mother Theresa Institute of Engineering and Technology, 2021-2025 - 78%</p>
+    </div>
+    <div class="card">
+      <p><b>Intermediate (MPC)</b> - Sri Vivekananda Junior College, 2019-2021 - 89%</p>
+    </div>
+    <div class="card">
+      <p><b>SSC</b> -Sri Vani Vidyalaya, 2018-2019 - 93%</p>
+    </div>
+  </section>
+
   <section id="projects">
     <h2>Projects</h2>
     <div class="card">
-      <h3>Online Food Order Prediction</h3>
-      <p>A machine learning project that predicts whether a customer will order food online based on various features.</p>
+      <h3>Face Recognition Attendance System</h3>
+      <p><b>Technologies:</b> Python, OpenCV, Raspberry Pi GPIO, RFID</p>
+      <p><b>Role:</b> Team Leader overseeing software-hardware integration</p>
+      <p><b>Achievements:</b> Delivered robust real-time attendance logging</p>
     </div>
     <div class="card">
-      <h3>Face Recognition Attendance System</h3>
-      <p>IoT-based attendance system using Raspberry Pi, RFID, and face recognition for secure authentication to avoid proxy attendance.</p>
+      <h3>Player Management System</h3>
+      <p><b>Backend:</b>Java Servlets, Hibernate (JPA)</p>
+      <p><b>Frontend:</b>JSP, HTML, CSS</p>
+      <p><b>Database:</b>MySQL</p>
+      <p><b>Role:</b>Implemented Hibernate ORM for database interactions in MySQL with entity classes and annotations.</p>
     </div>
   </section>
 
-  <!-- Contact Section -->
+  <section id="internships">
+    <h2>Internships</h2>
+    <div class="card">
+      <p><b>Full Stack Intern</b> - Dhee Coding Lab (Java Technologies)</p>
+    </div>
+    <div class="card">
+      <p><b>Virtual Internship on AI-ML-DS</b> - IIDT with Blackbucks at APSCHE (8 weeks)</p>
+    </div>
+  </section>
+
   <section id="contact">
     <h2>Contact</h2>
     <div class="card">
-      <p>Email: <a href="">reddyeanusha@email.com</a></p>
-      <p>Linkedin : <a href="">www.linkedin.com/in/anushareddy07</a></p>
-      <p>GitHub: <a href="">https://github.com/Anusha-Reddy2003 </a></p>
+      <p>📧 Email: <a href="mailto:">reddyeanusha@gmail.com</a></p>
+      <p>📞 Phone: 6304009699</p>
+      <p>🔗 <a href="https://linkedin.com/in/anushareddy07" target="_blank">LinkedIn</a> | 
+         <a href="https://github.com/anushareddye" target="_blank">GitHub</a></p>
     </div>
   </section>
 
-  
+  <footer>
+    <p>© 2026 E Anusha Reddy | Portfolio</p>
+  </footer>
+
+  <script>
+    // Fade-in animation when sections come into view
+    const sections = document.querySelectorAll("section");
+    const options = { threshold: 0.2 };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, options);
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  </script>
 </body>
 </html>
